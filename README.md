@@ -150,11 +150,16 @@ Terima kasih, program selesai.
 
 # Manfaat untuk Guru
 
-**-** Tidak perlu menghitung manual rata-rata dan ranking siswa.
-**-** Mudah melacak nilai tertinggi, terendah, dan rata-rata.
-**-** Bisa mencari siswa tertentu dengan cepat.
-**-** Menambahkan dan memperbarui data lebih rapi dan cepat.
-**-** Semua data tampil dalam tabel sehingga mudah dibaca saat evaluasi.
+
+**1.** Tidak perlu menghitung manual rata-rata dan ranking siswa.
+
+**2.** Mudah melacak nilai tertinggi, terendah, dan rata-rata.
+
+**3.** Bisa mencari siswa tertentu dengan cepat.
+
+**4.** Menambahkan dan memperbarui data lebih rapi dan cepat.
+
+**5.** Semua data tampil dalam tabel sehingga mudah dibaca saat evaluasi.
 
 # Cara Menjalankan Program
 
