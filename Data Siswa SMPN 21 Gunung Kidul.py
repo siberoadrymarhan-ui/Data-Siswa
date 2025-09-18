@@ -11,8 +11,8 @@ data_siswa = [
 ]
 
 # ===================== Fungsi Utility =====================
-def hitung_rata(d):
-    return (d['Praktek'] + d['Teori'] + d['Tugas'] + d['Kehadiran'] + d['Partisipasi']) / 5
+# Menggunakan lambda untuk menghitung rata-rata
+hitung_rata = lambda d: (d['Praktek'] + d['Teori'] + d['Tugas'] + d['Kehadiran'] + d['Partisipasi']) / 5
 
 def tampilkan_data(dataset):
     """Tampilkan data siswa dalam bentuk tabel"""
@@ -27,6 +27,8 @@ def tampilkan_data(dataset):
         ])
     headers = ["No", "NIM", "Nama", "Praktek", "Teori", "Tugas", "Hadir", "Part", "Rata2"]
     print(tabulate(tabel, headers=headers, tablefmt="grid"))
+    # Tambah info jumlah data
+    print(f"\nJumlah data ditampilkan: {len(dataset)} siswa\n")
 
 # ===================== CRUD & REPORT =====================
 def report_data():
@@ -41,12 +43,15 @@ def report_data():
         pilih = input("Pilih [1-4]: ")
         if pilih == "1":
             tampilkan_data(data_siswa)
+            print(f"Total siswa saat ini: {len(data_siswa)}\n")
         elif pilih == "2":
             print("\n=== Statistik Nilai ===")
             for k in ["Praktek", "Teori", "Tugas", "Kehadiran", "Partisipasi"]:
                 nilai = [d[k] for d in data_siswa]
                 print(f"{k:<12}: Rata-rata {statistics.mean(nilai):.2f}, Min {min(nilai)}, Max {max(nilai)}")
+            print(f"\nTotal data siswa: {len(data_siswa)}\n")
         elif pilih == "3":
+            # Lambda digunakan untuk sorting berdasarkan rata-rata
             ranking = sorted(data_siswa, key=lambda x: hitung_rata(x), reverse=True)
             print("\n=== Ranking Siswa ===")
             tampilkan_data(ranking)
@@ -69,6 +74,7 @@ def tambah_data():
                  "Partisipasi": part}
     data_siswa.append(data_baru)
     print("[✓] Data berhasil ditambahkan.")
+    print(f"Total siswa sekarang: {len(data_siswa)}\n")
 
 def ubah_data():
     nim = input("Masukkan NIM yang akan diubah: ")
@@ -89,19 +95,23 @@ def hapus_data():
         if d["NIM"] == nim:
             del data_siswa[i]
             print("[✓] Data berhasil dihapus.")
+            print(f"Total siswa sekarang: {len(data_siswa)}\n")
             return
     print("[!] Data tidak ditemukan.")
 
 def cari_data():
     key = input("Masukkan NIM/Nama: ").lower()
-    hasil = [d for d in data_siswa if key in d["NIM"].lower() or key in d["Nama"].lower()]
+    # Lambda untuk mempermudah filter pencarian
+    hasil = list(filter(lambda d: key in d["NIM"].lower() or key in d["Nama"].lower(), data_siswa))
     tampilkan_data(hasil)
+    print(f"Jumlah hasil pencarian: {len(hasil)} siswa\n")
 
 # ===================== Menu Utama =====================
 def menu_utama():
     while True:
-        print("""
+        print(f"""
 ========= Menu Utama ========= 
+Total data siswa: {len(data_siswa)}
 1. Report Data  
 2. Tambah Data
 3. Ubah Data
