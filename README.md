@@ -1,71 +1,54 @@
-# Data-Siswa
-Data Siswa SMPN 21 Gunung Kidul (Data Dumy)
 # Program Manajemen Data Siswa
+Data Siswa SMPN 21 Gunung Kidul (Data Dumy)
 
 Program ini dibuat untuk mengelola **data siswa** dengan fitur CRUD (Create, Read, Update, Delete) serta laporan sederhana.
 Data siswa disimpan dalam bentuk **list of dictionary** di dalam kode.
 
-# Fitur Utama
+# Deskripsi Program
+Program ini dirancang untuk membantu guru dalam mengelola data siswa dengan mudah.
+Fungsi utama yang bisa dilakukan:
 
-# Report Data
+**-** Menambahkan data siswa baru
 
-Menampilkan semua data siswa dalam bentuk tabel.
+**-** Mengubah data siswa yang sudah ada
 
-Menampilkan statistik nilai (rata-rata, nilai minimum, nilai maksimum).
+**-** Menghapus data siswa
 
-Menampilkan ranking siswa berdasarkan rata-rata nilai.
+**-** Mencari data siswa berdasarkan NIM atau Nama
 
-# Tambah Data
+**-** Menampilkan laporan (data lengkap, statistik nilai, dan ranking siswa)
 
-Menambahkan data siswa baru dengan NIM unik.
-
-# Ubah Data
-
-Mengubah data siswa berdasarkan NIM.
-
-# Hapus Data
-
-Menghapus data siswa berdasarkan NIM.
-
-# Cari Data
-
-Mencari siswa berdasarkan NIM atau Nama.
-
-# Keluar Program
+Data disajikan dalam bentuk tabel rapi menggunakan library tabulate sehingga mudah dibaca.
 
 
+# Data yang Dicatat
 
-# Struktur Data Siswa
+Setiap siswa memiliki informasi:
 
-Setiap siswa disimpan dalam bentuk dictionary:
-{
-  "NIM": "2200451",
-  "Nama": "Lukman",
-  "Praktek": 80,
-  "Teori": 75,
-  "Tugas": 80,
-  "Kehadiran": 120,
-  "Partisipasi": 89
-}
+**-** NIM (Nomor Induk Mahasiswa)
 
-# Cara Menjalankan Program
+**-** Nama
 
-**1.** Pastikan Python sudah terinstall di komputer Anda.
+**-** Nilai Praktek
 
-**2.** Install library **tabulate** (untuk tampilan tabel):
+**-** Nilai Teori
 
-pip install tabulate
+**-** Nilai Tugas
+
+**-** Kehadiran
+
+**-** Partisipasi
 
 
-**3.** Simpan kode program ke file, __**misalnya manajemen_siswa.py.**__
+# Panduan Penggunaan untuk Guru
 
-**4.** Jalankan program:
+**1. Panduan Penggunaan untuk Guru**
+Saat program dijalankan, akan muncul:
 
-python manajemen_siswa.py
-
-
-# Contoh Menu Utama
 ========= Menu Utama ========= 
+
+Total data siswa: 5
+
 1. Report Data  
 2. Tambah Data
 3. Ubah Data
@@ -74,25 +57,115 @@ python manajemen_siswa.py
 6. Keluar
 
 
-# Statistik Nilai
-Program akan menghitung:
+➡ Guru bisa memilih angka **1 sampai 6** sesuai kebutuhan.
 
- **- Rata-rata** setiap aspek penilaian
+**2. Report Data (_Laporan_)**
 
-**- Nilai minimum** dan **maksimum**
+Pilihan ini digunakan untuk melihat laporan nilai siswa.
 
-=== Statistik Nilai ===
-Praktek     : Rata-rata 74.00, Min 60, Max 90
-Teori       : Rata-rata 85.80, Min 75, Max 99
-Tugas       : Rata-rata 83.20, Min 79, Max 89
-Kehadiran   : Rata-rata 115.20, Min 110, Max 120
-Partisipasi : Rata-rata 86.60, Min 77, Max 99
+--- Report Data ---
+1. Tampilkan Semua Data
+2. Statistik Nilai
+3. Ranking Siswa
+4. Kembali
 
 
-# Catatan untuk Guru
+**-** **Tampilkan Semua Data** → Menampilkan seluruh data siswa dalam tabel.
 
-**-** Program ini dirancang agar **mudah digunakan tanpa perlu pengetahuan teknis tinggi.**
+**-** **Statistik Nilai** → Menampilkan rata-rata, nilai tertinggi, dan terendah dari tiap kategori (Praktek, Teori, Tugas, Kehadiran, Partisipasi).
 
-**-** Input data cukup dengan mengetik angka atau teks sesuai petunjuk di layar.
+**-** **Ranking Siswa** → Menampilkan urutan siswa berdasarkan nilai rata-rata (dari tertinggi ke terendah).
 
-**-** Hasil laporan ditampilkan otomatis dalam bentuk tabel agar mudah dibaca
+**-** **Kembali** → Kembali ke menu utama.
+
+
+**3. Tambah Data**
+
+Guru bisa memasukkan data siswa baru dengan mengetik NIM, Nama, dan nilai.
+
+Contoh:
+[
+NIM: 2200456
+
+Nama: bayu
+
+Nilai Praktek: 85
+
+Nilai Teori: 88
+
+Nilai Tugas: 92
+
+Kehadiran: 119
+
+Partisipasi: 95
+
+[✓] Data berhasil ditambahkan
+
+Total siswa sekarang: 6
+]
+
+**4. Ubah Data**
+
+Guru bisa memperbarui data siswa jika ada kesalahan atau perubahan.
+
+Masukkan NIM yang akan diubah: 2200452
+Data ditemukan, isi baru (biarkan kosong jika tidak diubah):
+Nama (Ayu): Ayu Lestari
+Praktek (90):
+Teori (78): 82
+Tugas (89):
+Kehadiran (111):
+Partisipasi (78): 80
+[✓] Data berhasil diubah.
+
+
+➡ Jika guru tidak ingin mengubah salah satu nilai, cukup tekan **Enter.**
+
+**5. Hapus Data**
+
+Menghapus data siswa yang sudah tidak diperlukan.
+
+Masukkan NIM yang akan dihapus: 2200453
+[✓] Data berhasil dihapus.
+Total siswa sekarang: 5
+
+**6. Cari Data**
+
+Guru bisa mencari siswa berdasarkan **NIM atau Nama.**
+
+Masukkan NIM/Nama: ayu
++----+----------+-------------+-----------+---------+---------+---------+---------+---------+
+| No | NIM      | Nama        |   Praktek |   Teori |   Tugas |   Hadir |   Part  |   Rata2 |
++====+==========+=============+===========+=========+=========+=========+=========+=========+
+|  1 | 2200452  | Ayu Lestari |        90 |      82 |      89 |     111 |      80 |   90.40 |
++----+----------+-------------+-----------+---------+---------+---------+---------+---------+
+Jumlah hasil pencarian: 1 siswa
+
+**7. Keluar**
+
+Jika sudah selesai, pilih menu 6 untuk keluar:
+
+Terima kasih, program selesai.
+
+
+# Manfaat untuk Guru
+
+**-** Tidak perlu menghitung manual rata-rata dan ranking siswa.
+**-** Mudah melacak nilai tertinggi, terendah, dan rata-rata.
+**-** Bisa mencari siswa tertentu dengan cepat.
+**-** Menambahkan dan memperbarui data lebih rapi dan cepat.
+**-** Semua data tampil dalam tabel sehingga mudah dibaca saat evaluasi.
+
+# Cara Menjalankan Program
+
+1. Pastikan Python sudah terpasang di komputer.
+
+2. Install library tabulate (jika belum ada):
+
+    pip install tabulate
+
+3. Simpan kode Python dengan nama _data_siswa.py._
+
+4. Jalankan program dengan perintah:
+
+    python data_siswa.py
