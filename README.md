@@ -64,7 +64,7 @@ Total data siswa: 5
 6. Keluar
 
 
-➡ Guru bisa memilih angka **1 sampai 6** sesuai kebutuhan.
+ Guru bisa memilih angka **1 sampai 6** sesuai kebutuhan.
 
 **2. Report Data (_Laporan_)**
 
@@ -126,7 +126,7 @@ Partisipasi (78): 80
 [✓] Data berhasil diubah.
 
 
-➡ Jika guru tidak ingin mengubah salah satu nilai, cukup tekan **Enter.**
+Jika guru tidak ingin mengubah salah satu nilai, cukup tekan **Enter.**
 
 **5. Hapus Data**
 
