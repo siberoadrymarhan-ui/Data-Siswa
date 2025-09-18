@@ -20,6 +20,13 @@ Fungsi utama yang bisa dilakukan:
 
 Data disajikan dalam bentuk tabel rapi menggunakan library tabulate sehingga mudah dibaca.
 
+# User
+Guru mata pelajaran atau wali kelas murid sebagai pengguna utama aplikasi
+
+# Keterbatasan
+1. data bersifat sementara, yang dimana apabila program ataupun sistem di hapus, data akan terhapus otomatis
+2. bisa disimpan datanya dengan menyimpan daata ke file seperti CSV, JSON, dll.
+
 
 # Data yang Dicatat
 
