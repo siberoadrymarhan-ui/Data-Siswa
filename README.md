@@ -3,7 +3,7 @@ Data Siswa SMPN 21 Gunung Kidul (Data Dumy)
 
 Program ini dibuat untuk mengelola **data siswa** dengan fitur CRUD (Create, Read, Update, Delete) serta laporan sederhana.
 Data siswa disimpan dalam bentuk **list of dictionary** di dalam kode.
-
+---
 # Deskripsi Program
 Program ini dirancang untuk membantu guru dalam mengelola data siswa dengan mudah.
 Fungsi utama yang bisa dilakukan:
@@ -141,11 +141,11 @@ Total siswa sekarang: 5
 Guru bisa mencari siswa berdasarkan **NIM atau Nama.**
 
 Masukkan NIM/Nama: ayu
-+----+----------+-------------+-----------+---------+---------+---------+---------+---------+
+|----|----------|-------------|-----------|---------|---------|---------|---------|---------|
 | No | NIM      | Nama        |   Praktek |   Teori |   Tugas |   Hadir |   Part  |   Rata2 |
-+====+==========+=============+===========+=========+=========+=========+=========+=========+
+|----| ---------| ------------| ----------| --------| --------| --------| --------| --------|
 |  1 | 2200452  | Ayu Lestari |        90 |      82 |      89 |     111 |      80 |   90.40 |
-+----+----------+-------------+-----------+---------+---------+---------+---------+---------+
+|----| ---------| ------------| ----------| --------| --------| --------| --------| --------|
 Jumlah hasil pencarian: 1 siswa
 
 **7. Keluar**
